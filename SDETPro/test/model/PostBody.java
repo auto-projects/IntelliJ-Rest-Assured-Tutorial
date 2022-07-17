@@ -50,5 +50,13 @@ public class PostBody {
         this.body = body;
     }
 
-
+    @Override
+    public String toString() {
+        return "PostBody{" +
+                "userId=" + userId +
+                ", id=" + id +
+                ", title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                '}';
+    }
 }
