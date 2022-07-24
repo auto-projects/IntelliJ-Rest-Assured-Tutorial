@@ -3,7 +3,6 @@ package utils;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.apache.commons.codec.binary.Base64;
 import test.model.RequestCapability;
 
 import java.util.List;
@@ -53,9 +52,7 @@ public class ProjectInfo implements RequestCapability {
 
         String email = "ngoclieu.ng@gmail.com";
         String apiToken = "Y6Hq9X0OwahBZCRrLzeU50D7";
-        String credentials = email.concat(":").concat(apiToken);
-        byte[] encodedCred = Base64.encodeBase64(credentials.getBytes());
-        String encodedCredString = new String(encodedCred);
+        String encodedCredString = AuthenticationHandler.encodedCredString(email, apiToken);
 
         // RequestSpecification object
         RequestSpecification request = given();

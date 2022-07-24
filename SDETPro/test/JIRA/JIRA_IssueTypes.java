@@ -3,7 +3,7 @@ package test.JIRA;
 import test.model.RequestCapability;
 import utils.ProjectInfo;
 
-public class JiraIssueTypes implements RequestCapability {
+public class JIRA_IssueTypes implements RequestCapability {
 
     public static void main(String[] args) {
 
